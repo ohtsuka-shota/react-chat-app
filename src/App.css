@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 800px;
+  min-width: 800px; /* 文字が入力されていなくても800pxの横幅を持たせる */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto; /* スクロール機能の追加 */
+  border-bottom: 1px solid #ccc;
+  max-height: 400px; /* 高さを固定 */
+}
+
+.message {
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: #e1ffc7;
+}
+
+.input-container {
+  display: flex;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  resize: none; /* サイズ変更を無効にする */
+  overflow: auto; /* オーバーフロー時にスクロールバーを表示 */
+}
+
+.send-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 800px) {
+  .chat-container {
+    max-width: 100%; /* 小さい画面では100%の幅にする */
+    min-width: 400px; /* 文字が入力されていなくても400pxの横幅を持たせる */
+  }
+}
